@@ -12,6 +12,6 @@ print(hiii)
 #Enes
 
 #Zehra
-selamlar
+selamlarrrrrrrrrrrrrr
 #Büşra
 ffllfmlmmmmAleyna
