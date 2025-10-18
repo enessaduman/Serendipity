@@ -26,7 +26,7 @@ while True:
 #Zeynep
 
 #Aleyna
-
+aleyna
 
 #Zehra
 
