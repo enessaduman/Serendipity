@@ -1,7 +1,7 @@
 #Enes
 #LOG FORMAT: student_no_password= studentNo-password
 #LOG FORMAT: student_full_info: StudentNo/name-surname-collageName-Major-Grade-password / ile numarayı arama yapmak için ayırıyoruz
-
+BURASI SİLİNECEK!!
 
 #Variables:
 student_name=""
