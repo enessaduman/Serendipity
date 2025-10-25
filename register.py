@@ -23,7 +23,7 @@ password = args.password
 try:
     student_id = int(student_id)
 except ValueError:
-    print("Student ID must comprised of integers only!")
+    print("Student ID must be comprised of integers only!")
     raise SystemExit
 if str(student_id) in existed_students:
     print("This student ID already exists! If you ensured that ID, please try to login!")
