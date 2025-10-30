@@ -14,4 +14,10 @@ The following commands should be run in your terminal.
 
 #### 🔹 Register a new user
 ```bash
-$ python register.py --username YourName
+$ py register.py --student_id STUDENT_ID --name_surname NAME_SURNAME --collage COLLAGE --major MAJOR --password PASSWORD
+  
+```
+#### 🔹 Login as an user
+```bash
+$ py login.py --student_id STUDENT_ID --password PASSWORD
+```
