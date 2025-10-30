@@ -29,6 +29,15 @@ Each plan requires a course name and a time goal (in hours and minutes).
 ```bash
 $ py study_plan_create.py --course_name COURSE_NAME --time TIME
 ```
+### 4️⃣ Adding a Completed Study Session
+
+After creating a study plan, you can log a completed study session for any course.  
+Each session entry requires the course name and the time you studied.
+
+#### 🔹 Add a completed study session
+```bash
+$ python enter_session.py --course_name COURSE_NAME --time TIME
+```
 ## 📁 File Structure
 ```
 StudyOrganizer/
