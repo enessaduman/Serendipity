@@ -5,9 +5,10 @@ temp_user=pull_user()
 temp_study_plan={}
 plan_str=""
 users_and_plans={}
+#seçenekler düzeltilmeli!
 plan_file_reader(temp_study_plan,temp_user,users_and_plans)
 parser = argparse.ArgumentParser(description="You can enter study sessions so that your gols will be completed! Each run adds 1 course!\n      Use UNDERSCORE instead of WHITESPACES!")
-parser.add_argument("--course_name",required=True,help="Name of the lecture",choices=temp_study_plan.keys(),type=str)
+parser.add_argument("--course_name",required=True,help="Name of the lecture",choices=[keys.replace(" ","_") for keys in temp_study_plan.keys()],type=str)
 parser.add_argument("--time",required=True,help="Studied time for the course in hh/mm")
 args=parser.parse_args()
 course_name=str(args.course_name).replace("_"," ").lower()
