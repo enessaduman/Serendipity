@@ -29,13 +29,6 @@ Each plan requires a course name and a time goal (in hours and minutes).
 ```bash
 $ py study_plan_create.py --course_name COURSE_NAME --time TIME
 ```
-## 📁 File Structure
-StudyOrganizer/
-├── register.py           # Register a new user
-├── login.py              # Log in as an existing user
-├── study_plan_create.py  # Create a new study plan
-├── enter_session.py      # Add completed study sessions
-├── StudyOrganizerUTIL.py # Utility functions
-└── users/                # Stores user data and plans
+
 
 
