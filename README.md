@@ -14,10 +14,18 @@ The following commands should be run in your terminal.
 
 #### 🔹 Register a new user
 ```bash
-$ py register.py --student_id STUDENT_ID --name_surname NAME_SURNAME --collage COLLAGE --major MAJOR --password PASSWORD
-  
+$ py register.py --student_id STUDENT_ID --name_surname NAME_SURNAME --collage COLLAGE --major MAJOR --password PASSWORD  
 ```
 #### 🔹 Login as an user
 ```bash
 $ py login.py --student_id STUDENT_ID --password PASSWORD
 ```
+### 2️⃣ Adding a Study Plan
+
+After registering and logging in, you can create a new study plan for a specific course.  
+Each plan requires a course name and a time goal (in hours and minutes).
+
+#### 🔹 Create a new study plan
+```bash
+$ python study_plan_create.py --course_name COURSE_NAME --time TIME
+
