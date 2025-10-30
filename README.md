@@ -37,7 +37,7 @@ StudyOrganizer/
 ├── study_plan_create.py  # Create a new study plan
 ├── enter_session.py      # Add completed study sessions
 ├── StudyOrganizerUTIL.py # Utility functions
-└── users/                # Stores user data and plans
+└── .txt files            # Stores user data and plans
 ```
 
 
