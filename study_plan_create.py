@@ -9,7 +9,7 @@ temp_user=pull_user()
 user_plan={}
 users_and_plans={}
 plan_str=""
-course_name=str(args.course_name).replace("_"," ")
+course_name=str(args.course_name).replace("_"," ").lower()
 time_list=str(args.time).split("/")
 try:
     if len(time_list) != 2:
@@ -44,6 +44,7 @@ users_and_plans[temp_user] = plan_str
 with open("plans.txt", "w") as file:
     for key, value in users_and_plans.items():
         file.write(f"{key}-{value}\n")
+    print(f"You're plan has been updated with the addition of {course_name} with a time of {time_list[0]}/{time_list[1]}.")
 
 
 
