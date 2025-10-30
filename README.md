@@ -5,8 +5,7 @@
 Study Organizer is a command-line tool that helps users manage their study goals efficiently.
 It allows users to define study plans, log their daily study sessions, and track their overall progress through simple terminal commands.
 
-<h2>How to Run</h2>
-## 🧭 How to Run
+<h2>🧭How to Run</h2>
 
 ### 1️⃣ Register & Login
 
