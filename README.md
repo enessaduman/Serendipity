@@ -1,4 +1,4 @@
-## 📚​ Study Orginizer
+## 📚​ Study Orginizer <br>
 
 📘 Overview<br>
 
