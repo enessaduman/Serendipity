@@ -27,5 +27,5 @@ Each plan requires a course name and a time goal (in hours and minutes).
 
 #### 🔹 Create a new study plan
 ```bash
-$ python study_plan_create.py --course_name COURSE_NAME --time TIME
+$ py study_plan_create.py --course_name COURSE_NAME --time TIME
 
