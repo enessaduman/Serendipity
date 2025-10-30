@@ -1,2 +1,2 @@
-#​ Study Orginizer 📚​
+#​Study Orginizer 📚​
 
