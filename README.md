@@ -36,7 +36,7 @@ Each session entry requires the course name and the time you studied.
 
 #### 🔹 Add a completed study session
 ```bash
-$ python enter_session.py --course_name COURSE_NAME --time TIME
+$ py enter_session.py --course_name COURSE_NAME --time TIME
 ```
 ## 📁 File Structure
 ```
