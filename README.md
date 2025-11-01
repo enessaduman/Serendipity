@@ -1,4 +1,4 @@
-# 📚​ Study Orginizer <br>
+# 📚​ Study Organizer <br>
 
 📘 Overview<br>
 
@@ -16,7 +16,7 @@ The following commands should be run in your terminal.
 ```bash
 $ py register.py --student_id STUDENT_ID --name_surname NAME_SURNAME --collage COLLAGE --major MAJOR --password PASSWORD  
 ```
-#### 🔹 Login as an user
+#### 🔹 Login as a user
 ```bash
 $ py login.py --student_id STUDENT_ID --password PASSWORD
 ```
@@ -29,6 +29,15 @@ Each plan requires a course name and a time goal (in hours and minutes).
 ```bash
 $ py study_plan_create.py --course_name COURSE_NAME --time TIME
 ```
+### 3️⃣ Displaying the Current Plan
+
+Next up is monitoring the plan! You can your whole courses and their times in a single plan. 
+It displays the courses one bye one in a list that matched with their goal times.
+
+#### 🔹 Display the Plan
+```bash
+$ py display.py
+```
 ### 4️⃣ Adding a Completed Study Session
 
 After creating a study plan, you can log a completed study session for any course.  
@@ -37,6 +46,14 @@ Each session entry requires the course name and the time you studied.
 #### 🔹 Add a completed study session
 ```bash
 $ py enter_session.py --course_name COURSE_NAME --time TIME
+```
+### 5️⃣ Exiting...
+
+Finally, when you're done with your operations, you have to exit.
+
+#### 🔹 Finalize the program
+```bash
+$ py exit.py
 ```
 ## 📁 File Structure
 ```

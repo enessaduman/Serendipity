@@ -4,8 +4,7 @@ with open("student_login_info.txt","r") as f:
     for line in f:
         line_lst=line.split(":")
         existed_students.append(line_lst[0])
-
-parser = argparse.ArgumentParser(description='User Registration\n!!! Please use UNDERSCORE (_) instead of SPACE between words !!!\n Otherwise you will not be able to enter multiple words for a field')
+parser = argparse.ArgumentParser(description='User Registration\n!!! Please use UNDERSCORE (_) instead of SPACE between words !!!\nOtherwise you will not be able to enter multiple words for a field')
 parser.add_argument("--student_id",required=True, help="Student ID")
 parser.add_argument("--name_surname",required=True, help="Name and surname")
 parser.add_argument("--collage",required=True, help="Collage Name")

@@ -10,6 +10,6 @@ print(f"    ~~ Study PLan ~~")
 for i,(key,value) in enumerate(temp_study_plan.items(),start=1):
     if str(value)!="0/0":
         time_list = str(value).split("/")
-        print(f"{i} -> COURSE: {key}  -  TIME: {time_list[0]}h and {time_list[1]}m")
+        print(f"{i} -> COURSE: {str(key).title()}  -  TIME: {time_list[0]}h and {time_list[1]}m")
     else:
-        print(f" {i} -> COURSE: {key}  -  COMPLETED!")
+        print(f" {i} -> COURSE: {str(key).title()}  -  COMPLETED!")
