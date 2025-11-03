@@ -1,5 +1,6 @@
 import argparse
 from StudyOrginizerUTIL import pull_user,user_checker,plan_file_reader
+#user validation and data retrieve
 user_checker()
 temp_user=pull_user()
 temp_study_plan={}
@@ -10,8 +11,10 @@ parser = argparse.ArgumentParser(description="You can enter study sessions so th
 parser.add_argument("--course_name",required=True,help="Name of the lecture",choices=[keys.replace(" ","_") for keys in temp_study_plan.keys()],type=str)
 parser.add_argument("--time",required=True,help="Studied time for the course in hh/mm")
 args=parser.parse_args()
+#arg parsing
 course_name=str(args.course_name).replace("_"," ").lower()
 time_list=str(args.time).split("/")
+#time input validation
 try:
     if len(time_list) != 2:
         print("You've entered either too many or a few time indicators! \nPlease check out the help menu to figure out the proper format for time!")
@@ -25,6 +28,7 @@ try:
 except ValueError:
     print("You didn't enter a valid time! Please check out the help menu to figure out the proper format for time!")
     raise SystemExit
+#main purpose (plan updater)
 if course_name in temp_study_plan.keys():
     completed_time=int(time_list[0])*60+int(time_list[1])
     goal_time_list=temp_study_plan[course_name].split("/")
@@ -56,6 +60,7 @@ if course_name in temp_study_plan.keys():
         else:
             print(f"Your study is saved! Now you have {hours} hours and {minutes} minutes remaining to study in {course_name}!")
         temp_study_plan[course_name]=f"{hours}/{minutes}"
+#re-write the plan
     plan_str=",".join([f"{k}:{v}" for k, v in temp_study_plan.items()])
     with open("plans.txt","w") as file:
         for keys,values in users_and_plans.items():

@@ -1,20 +1,30 @@
 import argparse
 usernames_passwords={}
 usernames_info={}
+#data retrieve
 def data_loader():
-    with open("student_login_info.txt","r") as file:
-        for line in file:
-            lst=line.strip("\n").split(":")
-            usernames_passwords[lst[0]]=lst[1]
-    with open("student_full_info.txt","r") as file:
-        for line in file:
-            lst=line.strip("\n").split("/")
-            usernames_info[lst[0]]=lst[1]
+    try:
+        with open("student_login_info.txt", "r") as file:
+            for line in file:
+                lst =line.strip().split(":")
+                if len(lst)==2:
+                    usernames_passwords[lst[0]]=lst[1]
+    except FileNotFoundError:
+        pass
+    try:
+        with open("student_full_info.txt", "r") as file:
+            for line in file:
+                lst = line.strip().split("/")
+                if len(lst)==2:
+                    usernames_info[lst[0]]=lst[1]
+    except FileNotFoundError:
+        pass
 parser = argparse.ArgumentParser()
 parser.add_argument("--student_id",required=True,help="Student ID")
 parser.add_argument("--password",required=True,help="Password")
 args = parser.parse_args()
 data_loader()
+#arg parsing and validation and user verifying
 try:
     student_id=(int(args.student_id))
 except ValueError:
@@ -29,3 +39,6 @@ else:
             file.write(str(student_id))
         info_lst=usernames_info[str(student_id)].split(":")
         print(f"Login Successful! Welcome {info_lst[0]}")
+    else:
+        print("Incorrect password")
+        raise SystemExit

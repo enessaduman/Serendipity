@@ -1,4 +1,5 @@
 import argparse
+#data retrieve
 existed_students=[]
 with open("student_login_info.txt","r") as f:
     for line in f:
@@ -11,6 +12,7 @@ parser.add_argument("--collage",required=True, help="Collage Name")
 parser.add_argument("--major",required=True, help="Major Name")
 parser.add_argument("--password",required=True, help="Password")
 args = parser.parse_args()
+#arg parsing
 student_id = args.student_id
 name_lst=str(args.name_surname).split("_")
 name_surname=" ".join(name_lst)
@@ -19,6 +21,7 @@ collage =" ".join(collage_lst)
 major_name_lst=str(args.major).split("_")
 major =" ".join(major_name_lst)
 password = args.password
+#checking inputs, enforce user to enter properly
 try:
     student_id = int(student_id)
 except ValueError:
